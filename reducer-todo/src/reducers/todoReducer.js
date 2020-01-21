@@ -1,5 +1,5 @@
 
-const data = [
+export const initialState = [
     {
         item: 'Unpack boxes',
         completed: false,
@@ -29,11 +29,7 @@ const data = [
         completed: false,
         id: 8587
     }
-]
-
-export const initialState = {
-    item: data
-}
+];
 
 export const todoReducer = (state, action) => {
 
