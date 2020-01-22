@@ -3,8 +3,7 @@ import {initialState, todoReducer} from '../reducers/todoReducer'
 import Todo from './Todo'
 
 const TodoList = () => {
-const [state] = useReducer(todoReducer, initialState);
-    
+const [state, dispatch] = useReducer(todoReducer, initialState);
 
     return (
         <div className='todo-list'>
@@ -12,8 +11,11 @@ const [state] = useReducer(todoReducer, initialState);
                 <Todo 
                 item={task.item} 
                 id={task.id} 
-                completed={task.completed}/>
+                completed={task.completed}
+                onClick={() => dispatch({ type: 'TOGGLE_TODO'})}
+                />
             ))}
+            
         </div>
     )
 }

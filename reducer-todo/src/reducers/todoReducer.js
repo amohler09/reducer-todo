@@ -32,7 +32,28 @@ export const initialState = [
 ];
 
 export const todoReducer = (state, action) => {
+    console.log('state', state);
+    console.log('action', action);
     switch(action.type) {
+        case 'TOGGLE_TODO':
+            return {
+                ...state,
+                completed: true
+            };
+        case 'ADD_TODO':
+            return [
+                ...state,
+                {
+                    item: action.payload,
+                    completed: false,
+                    id: Date.now()
+                }
+            ]
+        case 'CLEAR_TODOS':
+            return {
+                //(something involving the completed being false)
+                //(leave the completed: true), ternary operator?
+            }
         
     default:
         return state;
