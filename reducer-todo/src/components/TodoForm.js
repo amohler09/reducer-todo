@@ -13,7 +13,7 @@ const TodoForm = () => {
     }
 
     return (
-        <div>
+        <form>
            <input
            className='todo-input'
            type='text'
@@ -22,9 +22,9 @@ const TodoForm = () => {
            onChange={handleChanges}
            />
            <button 
-           onClick={() => dispatch({ type: 'ADD_TODO', payload: todoText})}
+           onClick={() => dispatch({ type: 'ADD_TODO', payload: todoText })}
            >Add Todo Item</button>
-        </div>
+        </form>
     )
 }
 
