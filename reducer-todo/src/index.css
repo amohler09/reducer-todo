@@ -14,17 +14,52 @@ code {
 
 .todo-complete {
   text-decoration: line-through;
-  background-color: red;
-  padding: 2%;
+  padding: 1%;  
 }
 
 .todo {
-  background-color: lightgray;
+  background-color: rgba(65, 131, 127, 0.618);
   width: 50%;
   padding: 2%;
   text-align: center;
   margin: 5% auto;
-  box-shadow: -8px 8px 8px darkgray;
+  box-shadow: -5px 5px 5px rgb(46, 125, 120),
+              -8px 8px 8px  black,
+              -15px 15px 5px rgb(46, 125, 120),
+              -18px 18px 8px black,
+              -25px 25px 5px rgb(46, 125, 120),
+              -28px 28px 8px black;
+}
 
+.todo-item {
+  padding: 1%;
+}
+
+.todo-input {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todoInput {
+  width: 90%;
+  height: 20px;
+  text-align: center;
+  background-color: rgb(46, 125, 120);
+  color: white;
+  margin-bottom: 3%;
+}
+
+.todo-button {
+  background-color: rgba(65, 131, 127, 0.618);
+  border: 2px solid rgb(46, 125, 120);
+  border-radius: 20px;
+  width: 50%;
+  height: 30px;
+  margin-bottom: 3%;
+  font-size: 1rem;
+  color: rgb(42, 87, 84);
 }
 

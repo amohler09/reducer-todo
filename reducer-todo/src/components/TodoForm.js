@@ -6,6 +6,11 @@ export const TodoForm = () => {
    const [state, dispatch] = useReducer(todoReducer, initialState);
    const [todoInput, setTodoInput] = useState('');
 
+    const handleSubmit = e => {
+        e.preventDefault();
+        setTodoInput('')
+    }
+
    const handleChanges = e => {
        setTodoInput(e.target.value)
    }
@@ -18,7 +23,11 @@ export const TodoForm = () => {
 
     return (
         <div>
-          <div className='todo-input'>
+            <div className='todo'>
+                <h2>Todo</h2>
+                <Todo state={state} toggleComplete={toggleComplete}/>
+            </div>
+            <form className='todo-input' onSubmit={handleSubmit}>
                 <input
                 className='todoInput'
                 type='text'
@@ -26,13 +35,12 @@ export const TodoForm = () => {
                 name='todoInput'
                 onChange={handleChanges}
                 />
-                <button onClick={() => dispatch({ type: 'ADD_TODO', payload: todoInput})}>Add Todo Item</button>
-                <button onClick={() => dispatch({ type: 'CLEAR_TODOS'})}>Clear Completed Items</button>
-            </div>
-            <div className='todo'>
-                <h2>Todo</h2>
-                <Todo state={state} toggleComplete={toggleComplete}/>
-            </div>
+                <button className='todo-button'
+                onClick={() => dispatch({ type: 'ADD_TODO', payload: todoInput})}>Add Todo Item</button>
+                <button className='todo-button'
+                onClick={() => dispatch({ type: 'CLEAR_TODOS'})}>Clear Completed Items</button>
+            </form>
+           
             
       
         </div>
