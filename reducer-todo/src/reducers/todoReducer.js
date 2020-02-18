@@ -41,13 +41,20 @@ export const todoReducer = (state, action) => {
         case 'TOGGLE_TODO':
             console.log('state', state)
             console.log('action', action)
-           state.todos.map(task => {
-               return task.id === action.payload ?  {...task, completed: !task.completed} : task
-           });
+            console.log('payload', action.payload)
+           const toggled = state.todos.map(task => task.id === action.payload ?  {...task, completed: !task.completed} : task);
+           return {
+               ...state,
+               todos: toggled
+           }
         case 'CLEAR_TODOS':
-            state.todos.filter(task => {
-                return task.completed === false
-            })       
+            console.log('state', state)
+            console.log('action', action)
+            const cleared = state.todos.filter(task => task.completed === false);
+            return {
+                ...state,
+                todos: cleared
+            } 
         default:
             return state;
     }

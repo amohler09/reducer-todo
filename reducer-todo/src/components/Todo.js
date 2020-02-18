@@ -5,7 +5,7 @@ const Todo = props => {
         <div>
             {props.state.todos.map(task => {
                 return (
-                    <div className={task.completed ? 'todo-complete' : 'todo'}
+                    <div className={task.completed ? 'todo-complete' : ''}
                     onClick={() => props.toggleComplete(task)}
                     key={task.id}>
                         <span>{task.item}</span>
