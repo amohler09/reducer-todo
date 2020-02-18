@@ -1,0 +1,65 @@
+body {
+  margin: 5%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.todo-complete {
+  text-decoration: line-through;
+  padding: 1%;  
+}
+
+.todo {
+  background-color: rgba(65, 131, 127, 0.618);
+  width: 50%;
+  padding: 2%;
+  text-align: center;
+  margin: 5% auto;
+  box-shadow: -5px 5px 5px rgb(46, 125, 120),
+              -8px 8px 8px  black,
+              -15px 15px 5px rgb(46, 125, 120),
+              -18px 18px 8px black,
+              -25px 25px 5px rgb(46, 125, 120),
+              -28px 28px 8px black;
+}
+
+.todo-item {
+  padding: 1%;
+}
+
+.todo-input {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todoInput {
+  width: 90%;
+  height: 20px;
+  text-align: center;
+  background-color: rgb(46, 125, 120);
+  color: white;
+  margin-bottom: 3%;
+}
+
+.todo-button {
+  background-color: rgba(65, 131, 127, 0.618);
+  border: 2px solid rgb(46, 125, 120);
+  border-radius: 20px;
+  width: 50%;
+  height: 30px;
+  margin-bottom: 3%;
+  font-size: 1rem;
+  color: rgb(42, 87, 84);
+}
+
