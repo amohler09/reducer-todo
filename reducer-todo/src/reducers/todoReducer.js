@@ -20,7 +20,7 @@ export const initialState = {
             item: 'Finish Scrimba Course',
             completed: false,
             id: 3892987592
-        },        
+        }        
     ]
 }
 
@@ -33,12 +33,15 @@ export const todoReducer = (state, action) => {
                 completed: false,
                 id: Date.now()
             }
-            console.log('state:', state, 'action:', action)
             return {
                 ...state,
                 todos: [...state.todos, newTodo],
                 
-            }
+            };
+        case 'TOGGLE_TODO':
+           return state.todos.map(task => {
+               return task.id === action.payload ?  {...task, completed: !task.completed} : task
+           })
             
         default:
             return state;
