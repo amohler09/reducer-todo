@@ -13,7 +13,7 @@
     "routes": [
     {
         "src": "/(.*)", 
-        "dest": "reduer-todo/$1" 
+        "dest": "reducer-todo/$1" 
     }
     ]
 }
